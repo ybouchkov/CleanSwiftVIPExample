@@ -1,24 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Parent View View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ParentViewViewController" customModule="DataPassingVIPExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RrK-zF-PfI">
+                                <rect key="frame" x="20" y="293.5" width="335" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrp-G0-rU8">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter child name ...." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Hq-Sn-wwt">
+                                        <rect key="frame" x="0.0" y="20.5" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G55-1H-j5n">
+                                        <rect key="frame" x="0.0" y="50.5" width="335" height="30"/>
+                                        <state key="normal" title="Child"/>
+                                        <connections>
+                                            <action selector="bntPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Rx-0Q-Vll"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RrK-zF-PfI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8qm-7P-2oi"/>
+                            <constraint firstItem="RrK-zF-PfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EM8-R7-ywE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RrK-zF-PfI" secondAttribute="trailing" constant="20" id="bFs-C1-aOA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wau-GV-GFr"/>
+                    <connections>
+                        <outlet property="label" destination="Vrp-G0-rU8" id="5o7-33-aos"/>
+                        <outlet property="textField" destination="8Hq-Sn-wwt" id="YFp-Iv-twj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="647.20000000000005" y="82.3088455772114"/>
+        </scene>
+        <!--Child View View Controller-->
+        <scene sceneID="ACa-zj-IFf">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewViewController" id="TaI-vM-kyW" customClass="ChildViewViewController" customModule="DataPassingVIPExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5am-Mf-fAp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D1G-Is-Y1c">
+                                <rect key="frame" x="20" y="303.5" width="335" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-fc-Khq">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter parent name ....." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogr-AY-QG9">
+                                        <rect key="frame" x="0.0" y="20.5" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIn-Fh-NCv">
+                                        <rect key="frame" x="0.0" y="50.5" width="335" height="30"/>
+                                        <state key="normal" title="Parent"/>
+                                        <connections>
+                                            <action selector="btnPressed:" destination="TaI-vM-kyW" eventType="touchUpInside" id="8Ma-Vx-tpi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D1G-Is-Y1c" firstAttribute="leading" secondItem="nRM-N2-TB2" secondAttribute="leading" constant="20" id="Ju7-IG-eBW"/>
+                            <constraint firstItem="nRM-N2-TB2" firstAttribute="trailing" secondItem="D1G-Is-Y1c" secondAttribute="trailing" constant="20" id="VJb-hM-Tfe"/>
+                            <constraint firstItem="D1G-Is-Y1c" firstAttribute="centerY" secondItem="5am-Mf-fAp" secondAttribute="centerY" constant="10.25" id="wcv-Xa-abc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nRM-N2-TB2"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Yvf-fc-Khq" id="24x-6i-o7p"/>
+                        <outlet property="textField" destination="ogr-AY-QG9" id="pno-PU-IZt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPJ-ab-Mcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="81"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		261EF69321A574930009DDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF69221A574930009DDA4 /* AppDelegate.swift */; };
-		261EF69521A574930009DDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF69421A574930009DDA4 /* ViewController.swift */; };
 		261EF69821A574930009DDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261EF69621A574930009DDA4 /* Main.storyboard */; };
 		261EF69A21A574940009DDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261EF69921A574940009DDA4 /* Assets.xcassets */; };
 		261EF69D21A574940009DDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261EF69B21A574940009DDA4 /* LaunchScreen.storyboard */; };
 		261EF6A821A574940009DDA4 /* DataPassingVIPExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6A721A574940009DDA4 /* DataPassingVIPExampleTests.swift */; };
 		261EF6B321A574940009DDA4 /* DataPassingVIPExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6B221A574940009DDA4 /* DataPassingVIPExampleUITests.swift */; };
+		261EF6C821A576E70009DDA4 /* ParentViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6C721A576E70009DDA4 /* ParentViewInteractor.swift */; };
+		261EF6CA21A577160009DDA4 /* ParentViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6C921A577160009DDA4 /* ParentViewPresenter.swift */; };
+		261EF6CC21A5773E0009DDA4 /* ParentViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6CB21A5773E0009DDA4 /* ParentViewRouter.swift */; };
+		261EF6D021A577970009DDA4 /* ParentViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6CF21A577970009DDA4 /* ParentViewModels.swift */; };
+		261EF6D221A578A40009DDA4 /* ParentViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6D121A578A40009DDA4 /* ParentViewViewController.swift */; };
+		261EF6D421A579070009DDA4 /* ParentViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6D321A579070009DDA4 /* ParentViewConfigurator.swift */; };
+		261EF6DB21A59DD70009DDA4 /* ChildViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6D521A59DD70009DDA4 /* ChildViewPresenter.swift */; };
+		261EF6DD21A59DD70009DDA4 /* ChildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6D721A59DD70009DDA4 /* ChildViewRouter.swift */; };
+		261EF6DF21A59DD70009DDA4 /* ChildViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6D921A59DD70009DDA4 /* ChildViewViewController.swift */; };
+		261EF6E021A59DD70009DDA4 /* ChildViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6DA21A59DD70009DDA4 /* ChildViewInteractor.swift */; };
+		261EF6E221A59EB90009DDA4 /* ChildViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6E121A59EB90009DDA4 /* ChildViewConfigurator.swift */; };
+		261EF6E621A5A6590009DDA4 /* ChildViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EF6E521A5A6590009DDA4 /* ChildViewModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,6 @@
 /* Begin PBXFileReference section */
 		261EF68F21A574930009DDA4 /* DataPassingVIPExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPassingVIPExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261EF69221A574930009DDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		261EF69421A574930009DDA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		261EF69721A574930009DDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		261EF69921A574940009DDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261EF69C21A574940009DDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,18 @@
 		261EF6AE21A574940009DDA4 /* DataPassingVIPExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataPassingVIPExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		261EF6B221A574940009DDA4 /* DataPassingVIPExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPassingVIPExampleUITests.swift; sourceTree = "<group>"; };
 		261EF6B421A574940009DDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		261EF6C721A576E70009DDA4 /* ParentViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewInteractor.swift; sourceTree = "<group>"; };
+		261EF6C921A577160009DDA4 /* ParentViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewPresenter.swift; sourceTree = "<group>"; };
+		261EF6CB21A5773E0009DDA4 /* ParentViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewRouter.swift; sourceTree = "<group>"; };
+		261EF6CF21A577970009DDA4 /* ParentViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewModels.swift; sourceTree = "<group>"; };
+		261EF6D121A578A40009DDA4 /* ParentViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewViewController.swift; sourceTree = "<group>"; };
+		261EF6D321A579070009DDA4 /* ParentViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewConfigurator.swift; sourceTree = "<group>"; };
+		261EF6D521A59DD70009DDA4 /* ChildViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewPresenter.swift; sourceTree = "<group>"; };
+		261EF6D721A59DD70009DDA4 /* ChildViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewRouter.swift; sourceTree = "<group>"; };
+		261EF6D921A59DD70009DDA4 /* ChildViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewViewController.swift; sourceTree = "<group>"; };
+		261EF6DA21A59DD70009DDA4 /* ChildViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewInteractor.swift; sourceTree = "<group>"; };
+		261EF6E121A59EB90009DDA4 /* ChildViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewConfigurator.swift; sourceTree = "<group>"; };
+		261EF6E521A5A6590009DDA4 /* ChildViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +119,8 @@
 		261EF69121A574930009DDA4 /* DataPassingVIPExample */ = {
 			isa = PBXGroup;
 			children = (
+				261EF6C021A574AF0009DDA4 /* Scenes */,
 				261EF69221A574930009DDA4 /* AppDelegate.swift */,
-				261EF69421A574930009DDA4 /* ViewController.swift */,
 				261EF69621A574930009DDA4 /* Main.storyboard */,
 				261EF69921A574940009DDA4 /* Assets.xcassets */,
 				261EF69B21A574940009DDA4 /* LaunchScreen.storyboard */,
@@ -123,6 +145,41 @@
 				261EF6B421A574940009DDA4 /* Info.plist */,
 			);
 			path = DataPassingVIPExampleUITests;
+			sourceTree = "<group>";
+		};
+		261EF6C021A574AF0009DDA4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				261EF6C121A574B50009DDA4 /* Parent */,
+				261EF6C221A574BE0009DDA4 /* Child */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		261EF6C121A574B50009DDA4 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				261EF6C721A576E70009DDA4 /* ParentViewInteractor.swift */,
+				261EF6C921A577160009DDA4 /* ParentViewPresenter.swift */,
+				261EF6CB21A5773E0009DDA4 /* ParentViewRouter.swift */,
+				261EF6CF21A577970009DDA4 /* ParentViewModels.swift */,
+				261EF6D121A578A40009DDA4 /* ParentViewViewController.swift */,
+				261EF6D321A579070009DDA4 /* ParentViewConfigurator.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		261EF6C221A574BE0009DDA4 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				261EF6D521A59DD70009DDA4 /* ChildViewPresenter.swift */,
+				261EF6D721A59DD70009DDA4 /* ChildViewRouter.swift */,
+				261EF6D921A59DD70009DDA4 /* ChildViewViewController.swift */,
+				261EF6DA21A59DD70009DDA4 /* ChildViewInteractor.swift */,
+				261EF6E121A59EB90009DDA4 /* ChildViewConfigurator.swift */,
+				261EF6E521A5A6590009DDA4 /* ChildViewModels.swift */,
+			);
+			path = Child;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +313,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				261EF69521A574930009DDA4 /* ViewController.swift in Sources */,
+				261EF6E221A59EB90009DDA4 /* ChildViewConfigurator.swift in Sources */,
+				261EF6D021A577970009DDA4 /* ParentViewModels.swift in Sources */,
+				261EF6CA21A577160009DDA4 /* ParentViewPresenter.swift in Sources */,
+				261EF6DB21A59DD70009DDA4 /* ChildViewPresenter.swift in Sources */,
 				261EF69321A574930009DDA4 /* AppDelegate.swift in Sources */,
+				261EF6D221A578A40009DDA4 /* ParentViewViewController.swift in Sources */,
+				261EF6C821A576E70009DDA4 /* ParentViewInteractor.swift in Sources */,
+				261EF6DF21A59DD70009DDA4 /* ChildViewViewController.swift in Sources */,
+				261EF6DD21A59DD70009DDA4 /* ChildViewRouter.swift in Sources */,
+				261EF6CC21A5773E0009DDA4 /* ParentViewRouter.swift in Sources */,
+				261EF6E621A5A6590009DDA4 /* ChildViewModels.swift in Sources */,
+				261EF6E021A59DD70009DDA4 /* ChildViewInteractor.swift in Sources */,
+				261EF6D421A579070009DDA4 /* ParentViewConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
